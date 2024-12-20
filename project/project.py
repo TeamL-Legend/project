@@ -113,10 +113,20 @@ else:
         if check_auth_pass != auth_pass:
             print("Неверный пароль")
         else:
-            a = int(input("катет_a: "))
-            b = int(input("катет_b: "))
-            c = (a * a + b * b) ** 0.5
-            print("гипотенуза", float(c))
+            choise_3_main = input("1 - bmi, 2 - Пифагор, 3 - Виета: ")
+            if choise_3_main == "1":
+                wheight = int(input("Вес: "))
+                height = int(input("Рост: "))
+                bmi = wheight / (height/100)**2
+                print(float(bmi))
+            elif choise_3_main == "2":
+                a = int(input("катет_a: "))
+                b = int(input("катет_b: "))
+                c = (a * a + b * b) ** 0.5
+                print("гипотенуза", float(c))
+            else:
+                if choise_3_main == "3":
+                    print("нельзя юзать math :(")
     else:
         print(wrongoption)
 #________________________________________   
